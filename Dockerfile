@@ -1,5 +1,5 @@
 
-FROM node:12-alpine
+FROM node:12
 WORKDIR /usr/src/app
 
 # Add package.json and run npm install
