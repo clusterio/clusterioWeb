@@ -1,5 +1,4 @@
-import link from "./../lib/link"
-
+const link = require("./../lib/link");
 const plugin = require("./../lib/plugin");
 const errors = require("./../lib/errors");
 const chalk = require("chalk");
