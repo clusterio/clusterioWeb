@@ -1,6 +1,6 @@
 import { Control, ControlConnector } from "./../util/websocket"
-const link = require("./../lib/link")
-const errors = require("./../lib/errors")
+import errors from "./../lib/errors"
+import link  from "./../lib/link"
 
 // Create WS connection to master. Used by all components through the interface exported here.
 (async () => {
