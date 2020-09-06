@@ -1,0 +1,33 @@
+@import "./defaults.scss";
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.ant-layout-sider-collapsed .logo  {
+  height: 0px;
+  color: #ffffff;
+}
+
+.container {
+    max-width: 320px;
+    width: 320px;
+    margin: 0 auto;
+    @include sm {
+      max-width: 500px;
+      width: 500px;
+    }
+    text-align: center;
+}
+
+.subMenuFix {
+  padding-left: 0px !important;
+}
+
+.subMenuFix2>div[style] {
+  padding-left: 60px !important;
+}
+
+.subMenuFix3[style] {
+  padding-left: 72px !important;
+}
