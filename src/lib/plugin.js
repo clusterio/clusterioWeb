@@ -468,7 +468,7 @@ async function invokeHook(plugins, hook, ...args) {
 }
 
 
-module.exports = {
+export {
 	BaseInstancePlugin,
 	BaseMasterPlugin,
 	BaseControlPlugin,

@@ -438,7 +438,7 @@ defaultCollectors.processStartTimeSeconds = new Gauge(
 defaultCollectors.processStartTimeSeconds.setToCurrentTime();
 
 
-module.exports = {
+export {
 	Counter,
 	Gauge,
 	CollectorRegistry,

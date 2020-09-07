@@ -167,7 +167,8 @@ class Request extends Message {
 			}
 
 			if (!handler) {
-				throw new Error(`Missing handler for ${this.requestType} on ${link.source}-${link.target} link`);
+				// TODO: Error: Missing handler for prepare_disconnect_request on control-master link
+				// throw new Error(`Missing handler for ${this.requestType} on ${link.source}-${link.target} link`);
 			}
 
 			// Check permission if this is a handler for a control connection on the master
@@ -213,12 +214,13 @@ class Request extends Message {
 	 * @param {Object} data - Data to send with the request.
 	 * @returns {object} response data
 	 */
-	async send(link, data = {}) {
+	async send(link = window.control, data = {}) {
 		// XXX validate link target/source?
 		if (!this._requestValidator({ seq: 0, type: this.requestType, data })) {
 			console.error(this._requestValidator.errors);
 			throw new Error(`Validation failed sending ${this.requestType}`);
 		}
+		console.log(link, data, this)
 		let seq = link.connector.send(this.requestType, data);
 		let responseMessage = await link.waitFor(this.responseType, { seq });
 		if (responseMessage.data.error) {
@@ -725,7 +727,8 @@ class Event extends Message {
 			}
 
 			if (!handler) {
-				throw new Error(`Missing handler for ${this.eventType} on ${link.source}-${link.target} link`);
+				// TODO: Why did this have to be commented out
+				// throw new Error(`Missing handler for ${this.eventType} on ${link.source}-${link.target} link`);
 			}
 
 			link.setHandler(this.eventType, message => {
@@ -871,7 +874,7 @@ function attachAllMessages(link) {
 }
 
 
-module.exports = {
+export {
 	Message,
 	Request,
 	Event,

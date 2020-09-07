@@ -2,7 +2,6 @@
  * Errors thrown in Clusterio
  * @module
  */
-"use strict";
 
 /**
  * Thrown by commands when they fail
@@ -63,7 +62,7 @@ class PluginError extends Error {
 	}
 }
 
-module.exports = {
+export {
 	CommandError,
 	RequestError,
 	InvalidMessage,

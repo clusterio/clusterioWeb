@@ -247,6 +247,6 @@ class Link {
 }
 
 
-module.exports = {
+export {
 	Link,
 };

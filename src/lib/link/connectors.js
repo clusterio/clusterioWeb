@@ -458,7 +458,7 @@ class VirtualConnector extends events.EventEmitter {
 	}
 }
 
-module.exports = {
+export {
 	WebSocketBaseConnector,
 	WebSocketClientConnector,
 	VirtualConnector,

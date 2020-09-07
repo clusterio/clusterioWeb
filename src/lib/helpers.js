@@ -19,6 +19,6 @@ function basicType(value) {
 	return typeof value;
 }
 
-module.exports = {
+export {
 	basicType,
 };

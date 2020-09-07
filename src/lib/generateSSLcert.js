@@ -6,7 +6,7 @@ const util = require("util");
 const hrtime = process.hrtime.bigint;
 
 
-module.exports = async function({
+export async function({
 	bits = 2048,
 	sslCertPath,
 	sslPrivKeyPath,

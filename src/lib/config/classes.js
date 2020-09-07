@@ -705,7 +705,7 @@ class PluginConfigGroup extends ConfigGroup {
 }
 
 
-module.exports = {
+export {
 	InvalidField,
 	InvalidValue,
 

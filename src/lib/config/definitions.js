@@ -433,7 +433,7 @@ async function handleConfigCommand(args, instance, configPath) {
 }
 
 
-module.exports = {
+export {
 	MasterGroup,
 	SlaveGroup,
 	InstanceGroup,

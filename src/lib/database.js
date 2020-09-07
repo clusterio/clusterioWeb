@@ -279,7 +279,7 @@ class ItemDatabase {
 	};
 }
 
-module.exports = {
+export {
 	mapToObject,
 	loadJsonAsMap,
 	saveMapAsJson,

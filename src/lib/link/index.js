@@ -3,9 +3,25 @@
  * @module lib/link
  * @author Hornwitser
  */
-"use strict";
-module.exports = {
-	...require("./link"),
-	...require("./messages"),
-	...require("./connectors"),
+import { Link } from "./link"
+import { WebSocketClientConnector,  } from "./connectors"
+import { 
+	Message,
+	Request,
+	Event,
+	attachAllMessages,
+	messages,
+ } from "./messages"
+export {
+	Link,
+	WebSocketClientConnector,
+	
+	Message,
+	Request,
+	Event,
+	attachAllMessages,
+	messages,
+	// ...require("./link"),
+	// ...require("./messages"),
+	// ...require("./connectors"),
 };
